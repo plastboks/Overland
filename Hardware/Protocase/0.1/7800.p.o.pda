@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Assembly designer="4.2.13" name="L Shape" tag="3D" verified="false" version="5">
+  <Description>An L-Shaped Enclosure</Description>
+  <Manufacturer>Protocase</Manufacturer>
+  <PartNumber>L-Shape Template</PartNumber>
+  <Revision rev="4">
+    <RevisionMessage baseRevision="1" message="The measurements of the enclosure were changed to bring them in line with the rest of our products.  Width, Depth, and Height refer to the dimensions of the base.  A manufacturing gap was placed between the parts, and an overhang of .030&quot; over the front and rear was added.  Cutouts position relative to the center of the enclosure is maintained."/>
+    <ParameterModification baseRevision="1" parameter="Height" scale="" shift="-(Thickness + PartsGap)"/>
+    <ParameterModification baseRevision="1" parameter="Width" scale="" shift="-(2*Thickness + 2*PartsGap)"/>
+    <FaceFeatureTransfer baseRevision="1" from="Chassis Base" to="Chassis Base">
+      <Origin shiftX="PartsGap"/>
+    </FaceFeatureTransfer>
+    <FaceFeatureTransferLShapeRev1 baseRevision="1" from="Front" to="Front">
+      <Origin shiftX="PartsGap"/>
+    </FaceFeatureTransferLShapeRev1>
+    <FaceFeatureTransferAlternateLShapeRev1 baseRevision="1" from="Front" to="Front">
+      <Origin shiftX="PartsGap"/>
+    </FaceFeatureTransferAlternateLShapeRev1>
+    <FaceFeatureTransferLShapeRev1 baseRevision="1" from="Rear" to="Rear">
+      <Origin shiftX="Thickness"/>
+    </FaceFeatureTransferLShapeRev1>
+    <FaceFeatureTransferAlternateLShapeRev1 baseRevision="1" from="Cover Rear" to="Rear">
+      <Origin shiftX="Thickness"/>
+    </FaceFeatureTransferAlternateLShapeRev1>
+    <FaceFeatureTransferAlternateLShapeRev1 baseRevision="1" from="Left Side" to="Right Side">
+      <Origin shiftX="-Overhang"/>
+    </FaceFeatureTransferAlternateLShapeRev1>
+    <FaceFeatureTransferAlternateLShapeRev1 baseRevision="1" from="Right Side" to="Left Side">
+      <Origin shiftX="-Thickness"/>
+    </FaceFeatureTransferAlternateLShapeRev1>
+    <FaceFeatureTransferLShapeRev1 baseRevision="1" from="Right Side" to="Right Side">
+      <Origin shiftX="-Overhang" shiftY="-(PartsGap+Thickness)"/>
+    </FaceFeatureTransferLShapeRev1>
+    <FaceFeatureTransferLShapeRev1 baseRevision="1" from="Left Side" to="Left Side">
+      <Origin shiftX="-Overhang" shiftY="-(Thickness+PartsGap)"/>
+    </FaceFeatureTransferLShapeRev1>
+    <FaceFeatureTransfer baseRevision="1" from="Top" to="Top">
+      <Origin shiftX="0.0" shiftY="-Overhang"/>
+    </FaceFeatureTransfer>
+    <FaceFeatureTransfer baseRevision="2" from="Top" to="Top"/>
+    <FaceFeatureTransfer baseRevision="2" from="Front" to="Front"/>
+    <FaceFeatureTransfer baseRevision="2" from="Rear" to="Rear"/>
+    <FaceFeatureTransfer baseRevision="2" from="Right Side" to="Right Side"/>
+    <FaceFeatureTransfer baseRevision="2" from="Left Side" to="Left Side"/>
+    <FaceFeatureTransfer baseRevision="2" from="Chassis Base" to="Chassis Base"/>
+    <FaceFeatureTransfer baseRevision="3" from="Top" to="Top"/>
+    <FaceFeatureTransfer baseRevision="3" from="Front" to="Front"/>
+    <FaceFeatureTransfer baseRevision="3" from="Rear" to="Rear"/>
+    <FaceFeatureTransfer baseRevision="3" from="Right Side" to="Right Side"/>
+    <FaceFeatureTransfer baseRevision="3" from="Left Side" to="Left Side"/>
+    <FaceFeatureTransfer baseRevision="3" from="Chassis Base" to="Chassis Base"/>
+  </Revision>
+  <ID>eb38d5cf-899e-483c-b0dd-3585eefdc063</ID>
+  <DesignID>L-Shape Template Rev 2</DesignID>
+  <ID>eb38d5cf-899e-483c-b0dd-3585eefdc063</ID>
+  <MetalInfo color="Default Color" material="MetalType" thickness="Thickness"/>
+  <Parameters>
+    <Parameter default="8.25" description="the width of the box" max="50" min="1" name="Width" template="true"/>
+    <Parameter default="5.25" description="the depth of the box" max="50" min="1" name="Depth" template="true"/>
+    <Parameter default="1.5" description="the height of the box" max="24" min="1" name="Height" template="true"/>
+    <Parameter default="18" description="the thickness of the box" name="Thickness" template="true" units="MetalThickness"/>
+    <Parameter default=".1" description="the bend radius" name="BendRad"/>
+    <Parameter default="Cold Rolled Steel" description="the type of metal used" name="MetalType" template="true" units="MetalType"/>
+    <Parameter default="Safety Orange, High Gloss, Smooth Polyester Powder" description="Default Powder Coat" name="Default Color" template="true" units="MetalColor"/>
+    <Parameter default="Use Default" description="the color of the box" name="ChassisColor" template="true" units="MetalColor"/>
+    <Parameter default="Use Default" description="the color of the top" name="TopColor" template="true" units="MetalColor"/>
+    <Parameter default=".427" description="the width of a flange" name="FlangeSize"/>
+    <Parameter default=".238" description="The length of the tabs for the corners" name="TabSize"/>
+    <Parameter default=".012" description="the width of a Notch" name="NotchSize"/>
+    <Parameter default=".625" description="the distance from the edge of a vertical flange to place a hole if not centered." name="HoleOffsetH"/>
+    <Parameter default=".358" description="the distance from the center of a hole on the chassis flanges to the front or rear of the enclosure." name="ChassisFlangeHoleOffset"/>
+    <Parameter default=".225" description="the distance from the edge of a horizontal flange to place a hole if not centered." name="HoleOffsetD"/>
+    <Parameter default=".165/2" description="the radius of a screw hole used for assembly, 6_32radius" name="HoleRadius"/>
+    <Parameter default=".01" description="the gap between parts (for manufacturing)" name="PartsGap"/>
+    <Parameter default=".03" description="the overhang for the cover" name="Overhang"/>
+    <Constraint formula="IfElse(((Width &gt; 3.0) OR (Depth &gt; 3.0)),IfElse((Height LEQ (Depth-2.0)),1.0,0.0),1.0)" message="Depth must be greater than height by 2 inches for all enclosures larger than 3x3x3"/>
+    <Constraint formula="IfElse(((Width &gt; 3.0) OR (Depth &gt; 3.0)), IfElse((Height LEQ (Width-2.0)),1.0,0.0), 1.0)" message="Width must be greater than height by 2 inches for all enclosures larger than 3x3x3"/>
+    <Constraint formula="IfElse((Width LEQ 3.0) AND (Depth LEQ 3.0), IfElse((Height &gt; Width),0.0,1.0), 1.0)" message="Width must be greater than or equal to height for all enclosures not larger than 3x3x3"/>
+    <Constraint formula="IfElse((Width LEQ 3.0) AND (Depth LEQ 3.0), IfElse((Height &gt; Depth),0.0,1.0), 1.0)" message="Depth must be greater than or equal to height for all enclosures not larger than 3x3x3"/>
+  </Parameters>
+  <Transforms>
+    <View3D shiftX="IfElse(Height&gt;1.5,0,-BendRad-Thickness)" shiftY="-BendRad-Thickness"/>
+  </Transforms>
+  <Connections>
+    <Absolute/>
+  </Connections>
+  <Components>
+    <Assembly designer="4.2.13" name="Base" tag="3D" template="true" verified="false" version="5">
+      <Description>The bottom of an L-shape box</Description>
+      <DesignID/>
+      <MetalInfo color="ChassisColor" material="MetalType" thickness="Thickness"/>
+      <Parameters>
+        <Parameter default="PartsGap" description="" name="PartsGap"/>
+        <Parameter default="Overhang" description="" name="Overhang"/>
+        <Parameter default="TabSize" description="" name="TabSize"/>
+        <Parameter default="Width" description="the length of the chassis" name="Width"/>
+        <Parameter default="Depth" description="" name="Depth"/>
+        <Parameter default="NotchSize" description="the width of a Notch" name="NotchSize"/>
+        <Parameter default="Height" description="the height of the chassis" name="Height"/>
+        <Parameter default="Thickness" description="the thickness of the chassis" name="Thickness"/>
+        <Parameter default="MetalType" description="The Metal Type used" name="MetalType"/>
+        <Parameter default="FlangeSize" description="the width of a flange" name="FlangeSize"/>
+        <Parameter default="BendRad" description="the bend radius" name="BendRad"/>
+        <Parameter default="ChassisColor" description="" name="ChassisColor"/>
+        <Parameter default="Height-Thickness-TabSize-NotchSize" description="" name="FLH"/>
+        <Parameter default="Width-2*TabSize-2*NotchSize" description="" name="FLW"/>
+        <Parameter default="IfElse(Height&gt;1.5,Depth-BendRad-2*Thickness-FlangeSize-NotchSize-PartsGap,Depth-2*Thickness-PartsGap)" description="" name="FLD"/>
+        <Parameter default="HoleOffsetH" description="" name="HoleOffsetH"/>
+        <Parameter default="ChassisFlangeHoleOffset" description="" name="ChassisFlangeHoleOffset"/>
+        <Parameter default="HoleOffsetD" description="" name="HoleOffsetD"/>
+      </Parameters>
+      <Connections>
+        <Absolute/>
+      </Connections>
+      <Components>
+        <PolyFace name="Chassis Base" pickable="true" template="true" version="5">
+          <FaceCoordinateTransform invertX="true">
+            <Origin dx="IfElse(Height&gt;1.5, 0, -BendRad-Thickness)" dy="-BendRad-Thickness"/>
+            <xDir dx="1.0" dy="0.0"/>
+            <yDir dx="0.0" dy="1.0"/>
+          </FaceCoordinateTransform>
+          <Connections>
+            <Absolute/>
+          </Connections>
+          <Components>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="IfElse(Height&gt;1.5,Width,Width-2*BendRad-2*Thickness)" name="base-Front bend" taper0="IfElse(Height&gt;1.5,BendRad+Thickness,-BendRad-Thickness)" taper1="IfElse(Height&gt;1.5,BendRad+Thickness,-BendRad-Thickness)" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="0" parentSideLoc="IfElse(Height&gt;1.5,Width,Width-2*BendRad-2*Thickness)"/>
+              </Connections>
+              <Components>
+                <PolyFace name="Front" pickable="true" template="true" version="5">
+                  <FaceCoordinateTransform>
+                    <Origin dx="IfElse(Height&gt;1.5, Width-BendRad-Thickness, Width)" dy="-BendRad-Thickness"/>
+                    <xDir dx="-1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="1.0"/>
+                  </FaceCoordinateTransform>
+                  <Connections>
+                    <Seam childSideLoc="IfElse(Height&gt; 1.5,-BendRad-Thickness,BendRad+Thickness)" parentSide="0" parentSideLoc="0"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <Thing2D OriginX="6.45" OriginY="0.6" color="Black" name="new assembly" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                      <Description/>
+                      <ID>b887cf1d-87c0-4fb5-b72f-3342cb8ab55d</ID>
+                      <Bounds height="0.448" width="3.2285000000000004" x="-1.892723552" y="-0.22435526320000002"/>
+                      <Flats>
+                        <Thing2D OriginX="(5.05)-(6.388223552045706)" OriginY="(0.673)-(0.6733552631578947)" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                          <Description>
+		Generic DB9 universal cutout male or female
+	</Description>
+                          <Manufacturer>
+		Generic
+	</Manufacturer>
+                          <PartNumber>DB9</PartNumber>
+                          <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
+                          <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                          <Flats>
+                            <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <CompositePath>
+                                  <Line dx=" -0.547000" dy="  0.000000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx=" -0.128025" dy=" -0.152574"/>
+                                    <PtOn dx=" -0.099586" dy=" -0.046438"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.031739" dy=" -0.180000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx="  0.128025" dy=" -0.107426"/>
+                                    <PtOn dx="  0.044463" dy=" -0.077012"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.483522" dy=" -0.000000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx="  0.128025" dy="  0.107426"/>
+                                    <PtOn dx="  0.083562" dy="  0.030414"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.031739" dy="  0.180000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx=" -0.128025" dy="  0.152574"/>
+                                    <PtOn dx=" -0.028439" dy="  0.106137"/>
+                                  </CircleArc3>
+                                </CompositePath>
+                              </Flats>
+                            </Thing2D>
+                            <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <Circle radius="  0.062500"/>
+                              </Flats>
+                            </Thing2D>
+                            <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <Circle radius="  0.062500"/>
+                              </Flats>
+                            </Thing2D>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="(7.5)-(6.388223552045706)" OriginY="(0.673)-(0.6733552631578947)" color="Black" name="User Circle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>41074700-43cf-43bd-a89d-fdcc253cc80f</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle filled="False" radius="0.224" thickness="1.0"/>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="0.0" OriginY="0.0" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                          <Description>
+		Generic DB9 universal cutout male or female
+	</Description>
+                          <Manufacturer>
+		Generic
+	</Manufacturer>
+                          <PartNumber>DB9</PartNumber>
+                          <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
+                          <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                          <Flats>
+                            <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <Circle radius="  0.062500"/>
+                              </Flats>
+                            </Thing2D>
+                            <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <Circle radius="  0.062500"/>
+                              </Flats>
+                            </Thing2D>
+                            <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                              <Description/>
+                              <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
+                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                              <Flats>
+                                <CompositePath>
+                                  <Line dx=" -0.547000" dy="  0.000000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx=" -0.128025" dy=" -0.152574"/>
+                                    <PtOn dx=" -0.099586" dy=" -0.046438"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.031739" dy=" -0.180000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx="  0.128025" dy=" -0.107426"/>
+                                    <PtOn dx="  0.044463" dy=" -0.077012"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.483522" dy=" -0.000000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx="  0.128025" dy="  0.107426"/>
+                                    <PtOn dx="  0.083562" dy="  0.030414"/>
+                                  </CircleArc3>
+                                  <Line dx="  0.031739" dy="  0.180000"/>
+                                  <CircleArc3>
+                                    <PtEnd dx=" -0.128025" dy="  0.152574"/>
+                                    <PtOn dx=" -0.028439" dy="  0.106137"/>
+                                  </CircleArc3>
+                                </CompositePath>
+                              </Flats>
+                            </Thing2D>
+                          </Flats>
+                        </Thing2D>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="1.0951447369" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <ID>95b7a791-7ee3-4e1a-a951-3e891a7bba30</ID>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle filled="False" height="0.591" thickness="1.0" width="0.67"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="2.7981447369000003" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <ID>20b54827-2cc4-43da-bbc4-232d079b04e2</ID>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle filled="False" height="0.525" thickness="1.0" width="1.25"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="1.947" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <ID>75b0578a-7a84-40d9-857f-5d304ea40433</ID>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle filled="False" height="0.7000000000000001" thickness="1.0" width="0.6000000000000001"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="Width-0.25" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Right side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="0" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Left Side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="TabSize+NotchSize" OriginY="Height-0.25" color="Black" exist="Width GEQ 18" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Width-2*(TabSize+NotchSize)"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="0" OriginY="0" color="Black" name="Bottom Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Width"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(Height&gt;1.5,-BendRad-Thickness,0)" OriginY="-BendRad-Thickness" color="Black" name="Inside Silk Exclusion" onBottom="false" rotation="0" tag="Cutout" template="true" type="NO_SILK" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="Height" width="Width"/>
+                      </Flats>
+                    </Thing2D>
+                  </Flats>
+                  <Vertices>
+                    <Vertex x="0" y="0" z="0"/>
+                    <Vertex x="IfElse(Height&gt; 1.5,Width - 2*Thickness - 2*BendRad,Width)" y="0" z="0"/>
+                    <Vertex exist="(Height)&gt; 1.5" x="Width - 2*Thickness - 2*BendRad" y="Height - TabSize-NotchSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="(Height)&gt; 1.5" x="Width - 2*Thickness - 2*BendRad-NotchSize" y="Height - TabSize-NotchSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="(Height)&gt; 1.5" x="Width - 2*Thickness - 2*BendRad-NotchSize" y="Height - TabSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="(Height)&gt; 1.5" x="Width - Thickness - BendRad" y="Height - TabSize - BendRad - Thickness" z="0"/>
+                    <Vertex x="IfElse(Height&gt; 1.5,Width - Thickness - BendRad,Width)" y="Height - BendRad - Thickness" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,Width - Thickness - BendRad - TabSize,Width-TabSize)" y="Height - BendRad - Thickness" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,Width - Thickness - BendRad - TabSize, Width-TabSize)" y="Height-2*BendRad-2*Thickness-NotchSize" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,Width - Thickness - BendRad - TabSize-NotchSize,Width-TabSize-NotchSize)" y="Height-2*BendRad-2*Thickness-NotchSize" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,Width - Thickness - BendRad - TabSize-NotchSize,Width-TabSize-NotchSize)" y="Height-2*BendRad-2*Thickness" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,TabSize - Thickness - BendRad+NotchSize,TabSize+NotchSize)" y="Height-2*BendRad-2*Thickness" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,TabSize - Thickness - BendRad+NotchSize,TabSize+NotchSize)" y="Height-2*BendRad-2*Thickness-NotchSize" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,TabSize - Thickness - BendRad,TabSize)" y="Height-2*BendRad-2*Thickness-NotchSize" z="0"/>
+                    <Vertex exist="IfElse(18&gt;Width,0.0,1.0)" x="IfElse(Height&gt;1.5,TabSize - Thickness - BendRad,TabSize)" y="Height - BendRad - Thickness" z="0"/>
+                    <Vertex x="IfElse(Height&gt; 1.5,- Thickness - BendRad,0)" y="Height - BendRad - Thickness" z="0"/>
+                    <Vertex exist="Height&gt; 1.5" x="- Thickness - BendRad" y="Height-TabSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="Height&gt; 1.5" x="NotchSize" y="Height-TabSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="Height&gt; 1.5" x="NotchSize" y="Height-TabSize-NotchSize - BendRad - Thickness" z="0"/>
+                    <Vertex exist="Height&gt; 1.5" x="0" y="Height-TabSize-NotchSize-BendRad-Thickness" z="0"/>
+                  </Vertices>
+                </PolyFace>
+              </Components>
+              <Flats/>
+            </Bend>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="IfElse(Height&gt;1.5,Depth-2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-2*Thickness-BendRad-PartsGap)" name="Chassis-Right side flange" taper1="IfElse(Height&gt;1.5,0,-BendRad)" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="IfElse(Height&gt;1.5,5,1)" parentSideLoc="IfElse(Height&gt;1.5,Depth-2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-BendRad-2*Thickness-PartsGap)"/>
+              </Connections>
+              <Components>
+                <RectFace length="IfElse(Height&gt;1.5,Depth-2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-2*Thickness-PartsGap)" name="Chassis right flange" pickable="true" template="true" version="5" width="FlangeSize">
+                  <FaceCoordinateTransform>
+                    <Origin dx="0.0" dy="0.0"/>
+                    <xDir dx="1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="1.0"/>
+                  </FaceCoordinateTransform>
+                  <AttachPts>
+                    <MatePt name="Chassis-Top Point" onBottom="true" x="0" y="0" z="-PartsGap"/>
+                  </AttachPts>
+                  <Connections>
+                    <Seam childSideLoc="0" parentSide="1" parentSideLoc="0"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <PEM OriginX="IfElse(Height&gt;1.5,FLD/2,Depth/2 - Thickness - PartsGap)" OriginY="FlangeSize/2" exist="IfElse(12&gt;Depth,0.0,1.0)" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                    <PEM OriginX="IfElse(Height &gt; 1.5,FLD-HoleOffsetD,Depth - Thickness - PartsGap - ChassisFlangeHoleOffset)" OriginY="FlangeSize/2" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                    <PEM OriginX="IfElse(Height &gt; 1.5, HoleOffsetD,ChassisFlangeHoleOffset - Thickness-PartsGap)" OriginY="FlangeSize/2" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                  </Flats>
+                </RectFace>
+              </Components>
+              <Flats/>
+            </Bend>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="IfElse(Height&gt;1.5,Depth-2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth - 2*Thickness-BendRad-PartsGap)" name="Chassis-Left flange" taper0="IfElse(Height&gt;1.5,0,-BendRad)" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="IfElse(Height&gt;1.5,7,3)" parentSideLoc="IfElse(Height&gt;1.5,Depth - 2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-BendRad-2*Thickness-PartsGap)"/>
+              </Connections>
+              <Components>
+                <RectFace length="IfElse(Height&gt;1.5,Depth - 2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-2*Thickness-PartsGap)" name="Left chassis flange" template="true" version="5" width="FlangeSize">
+                  <FaceCoordinateTransform invertX="true">
+                    <Origin dx="0" dy="0"/>
+                    <xDir dx="1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="1.0"/>
+                  </FaceCoordinateTransform>
+                  <Connections>
+                    <Seam childSideLoc="0" parentSide="1" parentSideLoc="IfElse(Height&gt;1.5,0,-BendRad)"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <PEM OriginX="((IfElse(Height&gt;1.5,FLD/2,Depth/2 - Thickness))-(0))*(1.0)" OriginY="((FlangeSize/2)-(0))*(1.0)" exist="IfElse(12&gt;Depth,0.0,1.0)" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                    <PEM OriginX="((IfElse(Height&gt;1.5,FLD-HoleOffsetD,FLD-ChassisFlangeHoleOffset + Thickness + PartsGap))-(0))*(1.0)" OriginY="((FlangeSize/2)-(0))*(1.0)" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                    <PEM OriginX="((IfElse(Height&gt;1.5,HoleOffsetD,ChassisFlangeHoleOffset - Thickness))-(0))*(1.0)" OriginY="((FlangeSize/2)-(0))*(1.0)" name="S-632-1ZI 6-32 heat treated carbon Nut" onBottom="true" partNum="S-632-1ZI" rotation="0.0" template="true"/>
+                  </Flats>
+                </RectFace>
+              </Components>
+              <Flats/>
+            </Bend>
+          </Components>
+          <Flats>
+            <PEM OriginX="3.983" OriginY="4.305" name="BSO-M3-6ZI m3 - 4.2 by 6 mm heat treated carbon Standoff" onBottom="true" partNum="BSO-M3-6ZI" rotation="0.0"/>
+            <PEM OriginX="3.9829999999999997" OriginY="1.155" name="BSO-M3-6ZI m3 - 4.2 by 6 mm heat treated carbon Standoff" onBottom="true" partNum="BSO-M3-6ZI" rotation="0.0"/>
+            <PEM OriginX="0.578" OriginY="1.305" name="BSO-M3-6ZI m3 - 4.2 by 6 mm heat treated carbon Standoff" onBottom="true" partNum="BSO-M3-6ZI" rotation="0.0"/>
+            <PEM OriginX="0.578" OriginY="4.205" name="BSO-M3-6ZI m3 - 4.2 by 6 mm heat treated carbon Standoff" onBottom="true" partNum="BSO-M3-6ZI" rotation="0.0"/>
+            <Thing2D OriginX="0" OriginY="0" color="Black" name="Front Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height=".25" width="Width"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="0" OriginY="0.25" color="Black" name="Right Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height="Depth-Thickness-PartsGap-0.25" width="0.25"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="Width - 0.25" OriginY="0.25" color="Black" name="Left Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height="Depth-Thickness-PartsGap-0.25" width=".25"/>
+              </Flats>
+            </Thing2D>
+          </Flats>
+          <Vertices>
+            <Vertex x="0" y="0" z="0"/>
+            <Vertex x="IfElse(Height&gt;1.5,Width,Width-2*BendRad-2*Thickness)" y="0" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="Width" y="FlangeSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="Width-NotchSize-BendRad-Thickness" y="FlangeSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="Width-NotchSize-BendRad-Thickness" y="FlangeSize+NotchSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="Width-BendRad-Thickness" y="FlangeSize+NotchSize" z="0"/>
+            <Vertex x="IfElse(Height&gt;1.5,Width-BendRad-Thickness,Width-2*BendRad-2*Thickness)" y="Depth-BendRad-2*Thickness-PartsGap" z="0"/>
+            <Vertex x="IfElse(Height&gt;1.5,BendRad+Thickness,0)" y="Depth-BendRad-2*Thickness-PartsGap" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="BendRad+Thickness" y="FlangeSize+NotchSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="BendRad + Thickness+NotchSize" y="FlangeSize+NotchSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="BendRad + Thickness+NotchSize" y="FlangeSize" z="0"/>
+            <Vertex exist="Height&gt;1.5" x="0" y="FlangeSize" z="0"/>
+          </Vertices>
+        </PolyFace>
+      </Components>
+    </Assembly>
+    <Assembly designer="4.2.13" name="Cover" tag="3D" template="true" verified="false" version="5">
+      <Description>The top of a u-shape box</Description>
+      <DesignID/>
+      <MetalInfo color="TopColor" material="MetalType" thickness="Thickness"/>
+      <Parameters>
+        <Parameter default="Overhang" description="" name="Overhang"/>
+        <Parameter default="PartsGap" description="" name="PartsGap"/>
+        <Parameter default="Width+2*Thickness+2*PartsGap" description="the length of the top" name="Width"/>
+        <Parameter default="Depth+Overhang" description="the depth of the top" name="Depth"/>
+        <Parameter default="Depth" description="" name="TotalD"/>
+        <Parameter default="Width" description="" name="TotalW"/>
+        <Parameter default="Height" description="" name="TotalH"/>
+        <Parameter default="Height+Thickness+PartsGap" description="the height of the top" name="Height"/>
+        <Parameter default="Thickness" description="the thickness of the top" name="Thickness"/>
+        <Parameter default="MetalType" description="The Metal Type used" name="MetalType"/>
+        <Parameter default="BendRad" description="the bend radius" name="BendRad"/>
+        <Parameter default="TopColor" description="" name="TopColor"/>
+        <Parameter default="FlangeSize" description="the width of a flange" name="FlangeSize"/>
+        <Parameter default="HoleRadius" description="the hole diameter for screws in assembly" name="HoleRadius"/>
+        <Parameter default="NotchSize" description="the width of a Notch" name="NotchSize"/>
+        <Parameter default="TabSize" description="" name="TabSize"/>
+        <Parameter default="ChassisFlangeHoleOffset" description="" name="ChassisFlangeHoleOffset"/>
+        <Parameter default="HoleOffsetH" description="" name="HoleOffsetH"/>
+        <Parameter default="HoleOffsetD" description="" name="HoleOffsetD"/>
+        <Parameter default="Width-2*TabSize-2*NotchSize" description="" name="FLW"/>
+        <Parameter default="IfElse(Height&gt;1.5,Depth-2*Thickness-BendRad-FlangeSize-NotchSize-PartsGap,Depth-2*Thickness-PartsGap)" description="" name="FLD"/>
+        <Parameter default="Height-Thickness-TabSize-NotchSize" description="" name="FLH"/>
+      </Parameters>
+      <Connections>
+        <Relative child="Top-Chassis Point" parent="Chassis-Top Point" rotation="180" virtual="0.0"/>
+      </Connections>
+      <Components>
+        <RectFace length="Width - 2*BendRad - 2*Thickness" name="Top" pickable="true" template="true" version="5" width="Depth-BendRad-Thickness">
+          <FaceCoordinateTransform>
+            <Origin dx="Width - 2*Thickness - BendRad - PartsGap" dy="Overhang"/>
+            <xDir dx="-1.0" dy="0.0"/>
+            <yDir dx="0.0" dy="1.0"/>
+          </FaceCoordinateTransform>
+          <Connections>
+            <Absolute/>
+          </Connections>
+          <Components>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="Depth-BendRad-Thickness" name="Cover-Left Side" taper0="-BendRad-Thickness" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="1" parentSideLoc="Depth-BendRad-Thickness"/>
+              </Connections>
+              <Components>
+                <RectFace length="Depth" name="Left Side" pickable="true" template="true" version="5" width="Height - Thickness - BendRad">
+                  <FaceCoordinateTransform invertX="true">
+                    <Origin dx="Depth - Overhang" dy="Height - (BendRad+Thickness)"/>
+                    <xDir dx="-1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="-1.0"/>
+                  </FaceCoordinateTransform>
+                  <Connections>
+                    <Seam childSideLoc="0" parentSide="1" parentSideLoc="-BendRad-Thickness"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <Thing2D OriginX="0" OriginY="0" color="Black" exist="TotalH&gt; 1.5" name="Front Flange Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="TotalH-TabSize-NotchSize" width="Thickness+BendRad+FlangeSize"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="-Overhang" OriginY="Height-0.25" color="Black" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Depth"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Thickness+BendRad+FlangeSize+NotchSize,-Overhang)" OriginY="0" color="Black" name="Bottom Flange Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="FlangeSize+BendRad+Thickness" width="IfElse(TotalH&gt;1.5,TotalD - FlangeSize - BendRad - Thickness-NotchSize,Depth)"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Depth - Overhang - (FLD/2+Thickness + PartsGap),Depth - Overhang - TotalD/2)" OriginY="BendRad+Thickness+FlangeSize/2" color="Black" exist="TotalD GEQ 12" name="Middle PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(Height&gt;1.5,BendRad+Thickness+FlangeSize+NotchSize+HoleOffsetD,ChassisFlangeHoleOffset)" OriginY="BendRad+Thickness+FlangeSize/2" color="Black" name="Front PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Depth - Overhang - HoleOffsetD-Thickness-PartsGap,Depth - Overhang - ChassisFlangeHoleOffset)" OriginY="BendRad+Thickness+FlangeSize/2" color="Black" name="Rear PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="BendRad+Thickness+FlangeSize/2" OriginY="Height - (BendRad+Thickness) - (-BendRad+PartsGap+TabSize+NotchSize+HoleOffsetH)" color="Black" exist="TotalH&gt;1.5" name="Top PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="BendRad+Thickness+FlangeSize/2" OriginY="Height - (BendRad+Thickness) - (-BendRad+PartsGap + TotalH/2+.275)" color="Black" exist="IfElse(10&gt;TotalH,0.0,1.0)" name="Bottom PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                  </Flats>
+                </RectFace>
+              </Components>
+              <Flats/>
+            </Bend>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="Width-2*BendRad-2*Thickness" name="Cover-Rear" taper0="-BendRad" taper1="-BendRad" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="2" parentSideLoc="Width-2*BendRad-2*Thickness"/>
+              </Connections>
+              <Components>
+                <RectFace length="Width-2*Thickness" name="Rear" pickable="true" template="true" version="5" width="Height - Thickness - BendRad">
+                  <FaceCoordinateTransform invertX="true">
+                    <Origin dx="Width - 2*Thickness - PartsGap" dy="Height - (BendRad+Thickness)"/>
+                    <xDir dx="-1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="-1.0"/>
+                  </FaceCoordinateTransform>
+                  <Connections>
+                    <Seam childSideLoc="0" parentSide="1" parentSideLoc="-BendRad"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <Thing2D OriginX="-PartsGap" OriginY="Height - 0.25" color="Black" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="0.25" width="Width-2*Thickness"/>
+                      </Flats>
+                    </Thing2D>
+                  </Flats>
+                </RectFace>
+              </Components>
+              <Flats/>
+            </Bend>
+            <Bend angle="90" irad="BendRad" kfactor="0.5" length="Depth-BendRad-Thickness" name="Right Side Bend" taper1="-BendRad-Thickness" template="true">
+              <Connections>
+                <Seam childSideLoc="0" parentSide="3" parentSideLoc="Depth-(BendRad+Thickness)"/>
+              </Connections>
+              <Components>
+                <RectFace length="Depth" name="Right Side" pickable="true" template="true" version="5" width="Height - Thickness - BendRad">
+                  <FaceCoordinateTransform>
+                    <Origin dx="Overhang" dy="Height - (BendRad+Thickness)"/>
+                    <xDir dx="1.0" dy="0.0"/>
+                    <yDir dx="0.0" dy="-1.0"/>
+                  </FaceCoordinateTransform>
+                  <AttachPts>
+                    <MatePt name="Top-Chassis Point" onBottom="false" x="Depth - Thickness-PartsGap" y="Height - 2*Thickness - 2*BendRad" z="0"/>
+                  </AttachPts>
+                  <Connections>
+                    <Seam childSideLoc="0" parentSide="1" parentSideLoc="0"/>
+                  </Connections>
+                  <Components/>
+                  <Flats>
+                    <Thing2D OriginX="0" OriginY="0" color="Black" exist="TotalH &gt; 1.5" name="Front Flange Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="TotalH-TabSize-NotchSize" width="Thickness+BendRad+FlangeSize"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="0" OriginY="Height - 0.25" color="Black" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Depth"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Thickness+BendRad+FlangeSize+NotchSize,-Overhang)" OriginY="0" color="Black" name="Bottom Flange Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="FlangeSize+BendRad+Thickness" width="IfElse(TotalH&gt;1.5,Depth-Overhang-BendRad-Thickness-FlangeSize-NotchSize, Depth)"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Thickness+BendRad+FlangeSize+NotchSize+FLD/2,TotalD/2)" OriginY="BendRad+Thickness + FlangeSize/2" color="Black" exist="IfElse(12&gt;TotalD,0.0,1.0)" name="Middle PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Depth-Thickness-HoleOffsetD-PartsGap-Overhang,Depth-ChassisFlangeHoleOffset-Overhang)" OriginY="BendRad+Thickness + FlangeSize/2" color="Black" name="Rear PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(TotalH&gt;1.5,Thickness+BendRad+FlangeSize+NotchSize+HoleOffsetD,ChassisFlangeHoleOffset)" OriginY="BendRad+Thickness + FlangeSize/2" color="Black" name="Front PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="Thickness+BendRad+(FlangeSize)/2" OriginY="Height - (BendRad+Thickness) -(-BendRad+PartsGap+TabSize+NotchSize+HoleOffsetH)" color="Black" exist="TotalH&gt; 1.5" name="Top PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="Thickness+BendRad+(FlangeSize)/2" OriginY="Height - (BendRad+Thickness) - (-BendRad+PartsGap+TotalH/2+.275)" color="Black" exist="IfElse(10&gt;TotalH,0.0,1.0)" name="Bottom PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Circle radius="HoleRadius"/>
+                      </Flats>
+                    </Thing2D>
+                  </Flats>
+                </RectFace>
+              </Components>
+              <Flats/>
+            </Bend>
+          </Components>
+          <Flats>
+            <Thing2D OriginX="TabSize+NotchSize+HoleOffsetD" OriginY="BendRad+Thickness+(FlangeSize)/2" color="Black" exist="TotalW GEQ 18" name="Left PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Circle radius="HoleRadius"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="TabSize+NotchSize+FLW/2" OriginY="BendRad+Thickness+(FlangeSize)/2" color="Black" exist="TotalW GEQ 18" name="Middle PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Circle radius="HoleRadius"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="TabSize+NotchSize+FLW-HoleOffsetD" OriginY="BendRad+Thickness+(FlangeSize)/2" color="Black" exist="TotalW GEQ 18" name="Right PEM hole" onBottom="true" rotation="0" tag="Cutout" template="true" type="CUTOUT" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Circle radius="HoleRadius"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="TabSize + NotchSize" OriginY="-Overhang" color="Black" exist="TotalW GEQ 18" name="Front Flange Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="false" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height="BendRad+Thickness+FlangeSize+Overhang" width="TotalW-2*TabSize-2*NotchSize"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="-Thickness-PartsGap" OriginY="Depth-Overhang-0.25" color="Black" name="Rear Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height=".25" width="Width"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="-Thickness-PartsGap" OriginY="-Overhang" color="Black" name="Left Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height="Depth-0.25" width=".25"/>
+              </Flats>
+            </Thing2D>
+            <Thing2D OriginX="Width-Thickness-PartsGap-0.25" OriginY="-Overhang" color="Black" name="Right Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+              <Description/>
+              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+              <Flats>
+                <Rectangle height="Depth-0.25" width=".25"/>
+              </Flats>
+            </Thing2D>
+          </Flats>
+        </RectFace>
+      </Components>
+    </Assembly>
+  </Components>
+</Assembly>
