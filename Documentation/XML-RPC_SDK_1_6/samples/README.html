@@ -1,0 +1,139 @@
+<html>
+<body>
+<h1>Code examples for Polycom KWS XML-RPC</h1>
+
+<p>This is a number of XML-RPC samples used to demonstrate the use of the XML-RPC API for the Polycom
+KWS products - currently KWS300 and KWS6000.</p>
+
+<p>One sample is written in Java, one in Visual Basic .NET and the rest in Python. The samples are simple
+and easy to understand even if you do not know the Python language. This README explains how to get
+started with the examples.</p>
+
+<h2>Java example</h2>
+
+<p>This is a sample illustrating how to access the Polycom KWS XML-RPC interface from Java. The sample
+uses Apache RPC-XML package for the XML-RPC client. The package is included and can be obtained from
+<a href="http://ws.apache.org/xmlrpc/">http://ws.apache.org/xmlrpc/</a>.</p>
+
+<h3>Executing the example</h3>
+
+<p>The samples are tested with OpenJDK java build 1.6.0_0-b14 and Sun java build 1.6.0_07-b06.</p>
+
+<p>To use the sample modify SendSMS.java to match your test system, compile and execute the command:</p>
+
+<p>Linux</p>
+<pre>./sendsms.sh</pre>
+
+<p>Microsoft Windows</p>
+<pre>sendsms.bat</pre>
+
+<h2>Visual Basic .NET example</h2>
+
+<p>This is a sample illustrating how to access the Polycom KWS XML-RPC interface from Visual Basic .NET. The sample
+uses the Cook Computing RPC-XML library for the XML-RPC client. The library is included and can be obtained from
+<a href="http://www.xml-rpc.net/">http://www.xml-rpc.net/</a>. The sample is created using
+Microsoft Visual Studio Express 2010.</p>
+
+<h2>Python examples</h2>
+
+<p>There is a number of Python XML-RPC samples used to demonstrate the use of the XML-RPC API for the Polycom
+KWS products - currently KWS300 and KWS6000.</p>
+
+<h3>Obtaining Python</h3>
+<p>The samples are tested with Python version 2.7. Please be aware that Python 3.x is a lot different from
+Python 2.x and the samples will not work with Python 3.x.</p>
+
+<p>Linux</p>
+<p>Most Linux distributions are shipped with Python installed. If Python is not installed use
+your package manager to install Python.</p>
+
+<p>Microsoft Windows</p>
+<p>Download Python from <a href="http://www.python.org">http://www.python.org</a> and install.</p>
+
+<h3>Executing the examples</h3>
+
+<p>To use the samples modify the files to match your test system and execute the command:</p>
+
+<pre>python &lt;sample-file&gt; &lt;KWS address&gt; &lt;to extension&gt;</pre>
+
+<p>For example:</p>
+
+<pre>python sendsms.py 192.168.0.1 2601</pre>
+
+<h3>Examples</h3>
+<table>
+<tr>
+<td><a href="python/broadcast.py">python/broadcast.py</a>
+<td>Broadcast a message to all handsets.</td>
+</tr>
+<tr>
+<td><a href="python/game_token.py">python/game_token.py</a>
+<td>A simple game demonstrating the features of the 6040 and 7040 handsets.</td>
+</tr>
+<tr>
+<td><a href="python/hardwareextension.py">python/hardwareextension.py</a>
+<td>Access the hardware extensions of the 6040 and 7040 handsets.</td>
+</tr>
+<tr>
+<td><a href="python/introspection.py">python/introspection.py</a>
+<td>Get information about the methods provided by the XML-RPC interface.</td>
+</tr>
+<tr>
+<td><a href="python/makecalladvanced.py">python/makecalladvanced.py</a>
+<td>Make a text call using advanced features.</td>
+</tr>
+<tr>
+<td><a href="python/makecallmenu.py">python/makecallmenu.py</a>
+<td>Make a text call and display a menu in the handset.</td>
+</tr>
+<tr>
+<td><a href="python/makecallprompt.py">python/makecallprompt.py</a>
+<td>Make a text call and display a prompt in the handset to receive input from the user.</td>
+</tr>
+<tr>
+<td><a href="python/makecall.py">python/makecall.py</a>
+<td>Make a basic text call.</td>
+</tr>
+<tr>
+<td><a href="python/receivecall.py">python/receivecall.py</a>
+<td>Receive a text call initiated from a handset.</td>
+</tr>
+<tr>
+<td><a href="python/receivesms.py">python/receivesms.py</a>
+<td>Receive a SMS send from a handset.</td>
+</tr>
+<tr>
+<td><a href="python/redundancy.py">python/redundancy.py</a>
+<td>Demonstrates how to create an application with failover for KWS6000 redundancy.</td>
+</tr>
+<tr>
+<td><a href="python/requestbasestations.py">python/requestbasestations.py</a>
+<td>Request the list of base stations from a handset. Used for a basic location service.</td>
+</tr>
+<tr>
+<td><a href="python/requeststatus.py">python/requeststatus.py</a>
+<td>Request status information from a handset. </td>
+</tr>
+<tr>
+<td><a href="python/sendsmshttps.py">python/sendsmshttps.py</a>
+<td>Send a SMS securely to a handset using XML-RPC via HTTPS.</td>
+</tr>
+<tr>
+<td><a href="python/sendsms.py">python/sendsms.py</a>
+<td>Send a SMS to a handset.</td>
+</tr>
+<tr>
+<td><a href="python/smsadvanced.py">python/smsadvanced.py</a>
+<td>Send an advanced SMS to a 6040 or 7040 handset.</td>
+</tr>
+<tr>
+<td><a href="python/smsrelay.py">python/smsrelay.py</a>
+<td>SMS relay that will receive an SMS and send it to the requested handset.</td>
+</tr>
+<tr>
+<td><a href="python/status.py">python/status.py</a>
+<td>Receive status information from handsets.</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Example1">
+</Property><Property Name="Solution File" Value="D:\Data\Visual Studio 2010\Projects\XMLRPC example\Example1.sln">
+</Property><Property Name="Date" Value="15. februar 2011">
+</Property><Property Name="Time" Value="09:06:06">
+</Property></Properties><Event ErrorLevel="0" Project="Example1" Source="Example1.vbproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="Example1" Source="Example1.vbproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="Example1" Source="Example1.vbproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>
