@@ -50,17 +50,17 @@
     <FaceFeatureTransfer baseRevision="3" from="Left Side" to="Left Side"/>
     <FaceFeatureTransfer baseRevision="3" from="Chassis Base" to="Chassis Base"/>
   </Revision>
-  <ID>eb38d5cf-899e-483c-b0dd-3585eefdc063</ID>
+  <ID>c135882c-fa46-4b0e-bf37-88134d30f93b</ID>
   <DesignID>L-Shape Template Rev 2</DesignID>
-  <ID>eb38d5cf-899e-483c-b0dd-3585eefdc063</ID>
+  <ID>c135882c-fa46-4b0e-bf37-88134d30f93b</ID>
   <MetalInfo color="Default Color" material="MetalType" thickness="Thickness"/>
   <Parameters>
-    <Parameter default="8.25" description="the width of the box" max="50" min="1" name="Width" template="true"/>
+    <Parameter default="10.25" description="the width of the box" max="50" min="1" name="Width" template="true"/>
     <Parameter default="5.25" description="the depth of the box" max="50" min="1" name="Depth" template="true"/>
     <Parameter default="1.5" description="the height of the box" max="24" min="1" name="Height" template="true"/>
     <Parameter default="18" description="the thickness of the box" name="Thickness" template="true" units="MetalThickness"/>
     <Parameter default=".1" description="the bend radius" name="BendRad"/>
-    <Parameter default="Cold Rolled Steel" description="the type of metal used" name="MetalType" template="true" units="MetalType"/>
+    <Parameter default="Aluminum" description="the type of metal used" name="MetalType" template="true" units="MetalType"/>
     <Parameter default="Safety Orange, High Gloss, Smooth Polyester Powder" description="Default Powder Coat" name="Default Color" template="true" units="MetalColor"/>
     <Parameter default="Use Default" description="the color of the box" name="ChassisColor" template="true" units="MetalColor"/>
     <Parameter default="Use Default" description="the color of the top" name="TopColor" template="true" units="MetalColor"/>
@@ -139,151 +139,221 @@
                   </Connections>
                   <Components/>
                   <Flats>
-                    <Thing2D OriginX="6.45" OriginY="0.6" color="Black" name="new assembly" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
-                      <Description/>
-                      <ID>b887cf1d-87c0-4fb5-b72f-3342cb8ab55d</ID>
-                      <Bounds height="0.448" width="3.2285000000000004" x="-1.892723552" y="-0.22435526320000002"/>
-                      <Flats>
-                        <Thing2D OriginX="(5.05)-(6.388223552045706)" OriginY="(0.673)-(0.6733552631578947)" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
-                          <Description>
+                    <Thing2D OriginX="7.788" OriginY="0.6" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                      <Description>
 		Generic DB9 universal cutout male or female
 	</Description>
-                          <Manufacturer>
+                      <Manufacturer>
 		Generic
 	</Manufacturer>
-                          <PartNumber>DB9</PartNumber>
-                          <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
-                          <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
-                          <Flats>
-                            <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <CompositePath>
-                                  <Line dx=" -0.547000" dy="  0.000000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx=" -0.128025" dy=" -0.152574"/>
-                                    <PtOn dx=" -0.099586" dy=" -0.046438"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.031739" dy=" -0.180000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx="  0.128025" dy=" -0.107426"/>
-                                    <PtOn dx="  0.044463" dy=" -0.077012"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.483522" dy=" -0.000000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx="  0.128025" dy="  0.107426"/>
-                                    <PtOn dx="  0.083562" dy="  0.030414"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.031739" dy="  0.180000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx=" -0.128025" dy="  0.152574"/>
-                                    <PtOn dx=" -0.028439" dy="  0.106137"/>
-                                  </CircleArc3>
-                                </CompositePath>
-                              </Flats>
-                            </Thing2D>
-                            <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <Circle radius="  0.062500"/>
-                              </Flats>
-                            </Thing2D>
-                            <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <Circle radius="  0.062500"/>
-                              </Flats>
-                            </Thing2D>
-                          </Flats>
-                        </Thing2D>
-                        <Thing2D OriginX="(7.5)-(6.388223552045706)" OriginY="(0.673)-(0.6733552631578947)" color="Black" name="User Circle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                      <PartNumber>DB9</PartNumber>
+                      <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
+                      <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                      <Flats>
+                        <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
                           <Description/>
-                          <ID>41074700-43cf-43bd-a89d-fdcc253cc80f</ID>
+                          <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
                           <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                           <Flats>
-                            <Circle filled="False" radius="0.224" thickness="1.0"/>
+                            <Circle radius="  0.062500"/>
                           </Flats>
                         </Thing2D>
-                        <Thing2D OriginX="0.0" OriginY="0.0" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
-                          <Description>
+                        <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle radius="  0.062500"/>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <CompositePath>
+                              <Line dx=" -0.547000" dy="  0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy=" -0.152574"/>
+                                <PtOn dx=" -0.099586" dy=" -0.046438"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy=" -0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy=" -0.107426"/>
+                                <PtOn dx="  0.044463" dy=" -0.077012"/>
+                              </CircleArc3>
+                              <Line dx="  0.483522" dy=" -0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy="  0.107426"/>
+                                <PtOn dx="  0.083562" dy="  0.030414"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy="  0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy="  0.152574"/>
+                                <PtOn dx=" -0.028439" dy="  0.106137"/>
+                              </CircleArc3>
+                            </CompositePath>
+                          </Flats>
+                        </Thing2D>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="6.45" OriginY="0.6" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                      <Description>
 		Generic DB9 universal cutout male or female
 	</Description>
-                          <Manufacturer>
+                      <Manufacturer>
 		Generic
 	</Manufacturer>
-                          <PartNumber>DB9</PartNumber>
-                          <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
-                          <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                      <PartNumber>DB9</PartNumber>
+                      <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
+                      <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                      <Flats>
+                        <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                           <Flats>
-                            <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <Circle radius="  0.062500"/>
-                              </Flats>
-                            </Thing2D>
-                            <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <Circle radius="  0.062500"/>
-                              </Flats>
-                            </Thing2D>
-                            <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
-                              <Description/>
-                              <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
-                              <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                              <Flats>
-                                <CompositePath>
-                                  <Line dx=" -0.547000" dy="  0.000000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx=" -0.128025" dy=" -0.152574"/>
-                                    <PtOn dx=" -0.099586" dy=" -0.046438"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.031739" dy=" -0.180000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx="  0.128025" dy=" -0.107426"/>
-                                    <PtOn dx="  0.044463" dy=" -0.077012"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.483522" dy=" -0.000000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx="  0.128025" dy="  0.107426"/>
-                                    <PtOn dx="  0.083562" dy="  0.030414"/>
-                                  </CircleArc3>
-                                  <Line dx="  0.031739" dy="  0.180000"/>
-                                  <CircleArc3>
-                                    <PtEnd dx=" -0.128025" dy="  0.152574"/>
-                                    <PtOn dx=" -0.028439" dy="  0.106137"/>
-                                  </CircleArc3>
-                                </CompositePath>
-                              </Flats>
-                            </Thing2D>
+                            <CompositePath>
+                              <Line dx=" -0.547000" dy="  0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy=" -0.152574"/>
+                                <PtOn dx=" -0.099586" dy=" -0.046438"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy=" -0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy=" -0.107426"/>
+                                <PtOn dx="  0.044463" dy=" -0.077012"/>
+                              </CircleArc3>
+                              <Line dx="  0.483522" dy=" -0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy="  0.107426"/>
+                                <PtOn dx="  0.083562" dy="  0.030414"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy="  0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy="  0.152574"/>
+                                <PtOn dx=" -0.028439" dy="  0.106137"/>
+                              </CircleArc3>
+                            </CompositePath>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle radius="  0.062500"/>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle radius="  0.062500"/>
                           </Flats>
                         </Thing2D>
                       </Flats>
                     </Thing2D>
-                    <Thing2D OriginX="1.0951447369" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                    <Thing2D OriginX="9.5" OriginY="0.5996447368" color="Black" name="User Circle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
                       <Description/>
-                      <ID>95b7a791-7ee3-4e1a-a951-3e891a7bba30</ID>
+                      <ID>41074700-43cf-43bd-a89d-fdcc253cc80f</ID>
                       <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                       <Flats>
-                        <Rectangle filled="False" height="0.591" thickness="1.0" width="0.67"/>
+                        <Circle filled="False" radius="0.224" thickness="1.0"/>
                       </Flats>
                     </Thing2D>
-                    <Thing2D OriginX="2.7981447369000003" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                    <Thing2D OriginX="5.1117764480000005" OriginY="0.5996447368" color="Black" name="DB9" onBottom="true" rotation="0.0" tag="Cutout" verified="false" version="5">
+                      <Description>
+		Generic DB9 universal cutout male or female
+	</Description>
+                      <Manufacturer>
+		Generic
+	</Manufacturer>
+                      <PartNumber>DB9</PartNumber>
+                      <ID>52d2bd32-bd06-4e9c-9650-2641ec78fe46</ID>
+                      <Bounds height="  0.440000" width="  1.109000" x="-0.5545" y="-0.22"/>
+                      <Flats>
+                        <Thing2D OriginX="-0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>3d9065d8-4f86-47d9-99ef-2a6943dce65d</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle radius="  0.062500"/>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="0.492" OriginY="0.0" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>50af6412-8511-455d-b547-81e5e6733cd7</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <Circle radius="  0.062500"/>
+                          </Flats>
+                        </Thing2D>
+                        <Thing2D OriginX="0.27349999999999997" OriginY="0.22" color="Black" name="CUTOUT" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
+                          <Description/>
+                          <ID>2f990005-6608-4f3c-8cfd-3784487082d1</ID>
+                          <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                          <Flats>
+                            <CompositePath>
+                              <Line dx=" -0.547000" dy="  0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy=" -0.152574"/>
+                                <PtOn dx=" -0.099586" dy=" -0.046438"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy=" -0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy=" -0.107426"/>
+                                <PtOn dx="  0.044463" dy=" -0.077012"/>
+                              </CircleArc3>
+                              <Line dx="  0.483522" dy=" -0.000000"/>
+                              <CircleArc3>
+                                <PtEnd dx="  0.128025" dy="  0.107426"/>
+                                <PtOn dx="  0.083562" dy="  0.030414"/>
+                              </CircleArc3>
+                              <Line dx="  0.031739" dy="  0.180000"/>
+                              <CircleArc3>
+                                <PtEnd dx=" -0.128025" dy="  0.152574"/>
+                                <PtOn dx=" -0.028439" dy="  0.106137"/>
+                              </CircleArc3>
+                            </CompositePath>
+                          </Flats>
+                        </Thing2D>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="IfElse(Height&gt;1.5,-BendRad-Thickness,0)" OriginY="-BendRad-Thickness" color="Black" name="Inside Silk Exclusion" onBottom="false" rotation="0" tag="Cutout" template="true" type="NO_SILK" verified="true" version="5">
                       <Description/>
-                      <ID>20b54827-2cc4-43da-bbc4-232d079b04e2</ID>
                       <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                       <Flats>
-                        <Rectangle filled="False" height="0.525" thickness="1.0" width="1.25"/>
+                        <Rectangle height="Height" width="Width"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="0" OriginY="0" color="Black" name="Bottom Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Width"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="TabSize+NotchSize" OriginY="Height-0.25" color="Black" exist="Width GEQ 18" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height=".25" width="Width-2*(TabSize+NotchSize)"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="0" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Left Side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
+                      </Flats>
+                    </Thing2D>
+                    <Thing2D OriginX="Width-0.25" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Right side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                      <Description/>
+                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
+                      <Flats>
+                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
                       </Flats>
                     </Thing2D>
                     <Thing2D OriginX="1.947" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
@@ -294,39 +364,20 @@
                         <Rectangle filled="False" height="0.7000000000000001" thickness="1.0" width="0.6000000000000001"/>
                       </Flats>
                     </Thing2D>
-                    <Thing2D OriginX="Width-0.25" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Right side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                    <Thing2D OriginX="2.7981447369000003" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
                       <Description/>
+                      <ID>20b54827-2cc4-43da-bbc4-232d079b04e2</ID>
                       <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                       <Flats>
-                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
+                        <Rectangle filled="False" height="0.525" thickness="1.0" width="1.25"/>
                       </Flats>
                     </Thing2D>
-                    <Thing2D OriginX="0" OriginY="0.25" color="Black" exist="Height&gt; 1.5" name="Left Side Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
+                    <Thing2D OriginX="1.0951447369" OriginY="0.33" color="Black" name="Rectangle" onBottom="true" rotation="0.0" tag="Cutout" type="CUTOUT" verified="false" version="5">
                       <Description/>
+                      <ID>95b7a791-7ee3-4e1a-a951-3e891a7bba30</ID>
                       <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
                       <Flats>
-                        <Rectangle height="Height-TabSize-NotchSize - 0.25" width="0.25"/>
-                      </Flats>
-                    </Thing2D>
-                    <Thing2D OriginX="TabSize+NotchSize" OriginY="Height-0.25" color="Black" exist="Width GEQ 18" name="Top Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
-                      <Description/>
-                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                      <Flats>
-                        <Rectangle height=".25" width="Width-2*(TabSize+NotchSize)"/>
-                      </Flats>
-                    </Thing2D>
-                    <Thing2D OriginX="0" OriginY="0" color="Black" name="Bottom Bend Exclusion" onBottom="true" rotation="0" tag="Cutout" template="true" type="EXCLUSION" verified="true" version="5">
-                      <Description/>
-                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                      <Flats>
-                        <Rectangle height=".25" width="Width"/>
-                      </Flats>
-                    </Thing2D>
-                    <Thing2D OriginX="IfElse(Height&gt;1.5,-BendRad-Thickness,0)" OriginY="-BendRad-Thickness" color="Black" name="Inside Silk Exclusion" onBottom="false" rotation="0" tag="Cutout" template="true" type="NO_SILK" verified="true" version="5">
-                      <Description/>
-                      <Bounds height="1.0" width="1.0" x="0.0" y="0.0"/>
-                      <Flats>
-                        <Rectangle height="Height" width="Width"/>
+                        <Rectangle filled="False" height="0.591" thickness="1.0" width="0.67"/>
                       </Flats>
                     </Thing2D>
                   </Flats>
